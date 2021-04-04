@@ -324,7 +324,7 @@ def forecast_hierarchical(stan_fit, p=4, horizon=10):
     mu_trend[:,replace_ind] = mu_trend_train
     mu_s[:,replace_ind] = mu_s_train
     
-    return y_hat, mu_trend, mu_s
+    return y_hat, mu_trend, mu_s, replace_ind
 
 
 def plot_posterior(stan_fit, ts: np.array, ci: list = [0.05, 0.95],
